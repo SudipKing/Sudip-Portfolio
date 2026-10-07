@@ -1,6 +1,1 @@
-// Links with a data-placeholder attribute are not filled in yet.
-document.querySelectorAll('[data-placeholder]').forEach(function (el) {
-  el.setAttribute('title', el.dataset.placeholder);
-  el.setAttribute('aria-disabled', 'true');
-  el.addEventListener('click', function (e) { e.preventDefault(); });
-});
+(function(){const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;const panels=[...document.querySelectorAll('.panel')];function go(id){const el=document.querySelector(id);if(!el)return;el.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest',inline:'start'});}document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a&&a.getAttribute('href')!=='#'){e.preventDefault();go(a.getAttribute('href'));}});document.addEventListener('keydown',e=>{if(innerWidth<=900)return;if(e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();const p=panels.find(x=>x.offsetLeft>scrollX+30);if(p)go('#'+p.id)}if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();const p=[...panels].reverse().find(x=>x.offsetLeft<scrollX-30);if(p)go('#'+p.id)}});document.querySelectorAll('[data-placeholder]').forEach(el=>{el.title=el.dataset.placeholder;el.addEventListener('click',e=>e.preventDefault())});})();
