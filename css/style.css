@@ -48,3 +48,6 @@ body{background:radial-gradient(55% 60% at 75% 28%,rgba(176,150,118,.34),transpa
  .hero-photo{width:min(360px,88%);margin-top:20px}.chip{position:static;max-width:none;margin-top:10px}
 }
 .hero{padding-left:7vw;padding-right:7vw}
+
+/* Profile image */
+.hero-photo img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;object-position:center bottom;visibility:visible;opacity:1}
