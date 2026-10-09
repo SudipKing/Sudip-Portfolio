@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+try { if (localStorage.getItem('portfolio-theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (_) {}
+</script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -30,7 +33,7 @@
     <use href="#perch-blossom" transform="translate(280 37) scale(.45)" style="color:#f1b6c8"/>
     <ellipse cx="154" cy="25" rx="3" ry="5" fill="#edb0c1" transform="rotate(25 154 25)"/>
   </g>
-</svg><nav aria-label="Main"><a href="#top">Home</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#research">Research</a><a href="#contact">Contact</a></nav><div class="nav-cta"><a class="nav-github" href="https://github.com/SudipKing" target="_blank" rel="noopener">GitHub ↗</a><a class="nav-resume" href="resume.html">Resume ↗</a></div></header>
+</svg><nav aria-label="Main"><a href="#top">Home</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#research">Research</a><a href="#contact">Contact</a></nav><div class="nav-cta"><a class="nav-github" href="https://github.com/SudipKing" target="_blank" rel="noopener">GitHub ↗</a><a class="nav-resume" href="resume.html">Resume ↗</a><button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode"><span class="theme-icon" aria-hidden="true">☀</span></button></div></header>
 <main id="main" class="horizontal">
 <section class="hero" id="top">
   <div class="wrap hero-grid">
@@ -125,6 +128,7 @@
 </main>
 <footer><div class="wrap"><p>Sudip Chaudhary • University of Washington Tacoma</p></div></footer>
 <canvas id="parakeet-bird" class="parakeet-bird" width="240" height="200" aria-hidden="true"></canvas>
+<script src="js/theme.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
