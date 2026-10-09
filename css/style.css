@@ -52,27 +52,11 @@ body{background:radial-gradient(55% 60% at 75% 28%,rgba(176,150,118,.34),transpa
 /* Profile image */
 .hero-photo img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;object-position:center bottom;visibility:visible;opacity:1}
 
-/* Pixel parakeet companion */
-.nav{position:fixed}
+/* Budgie companion and flowering perch */
 .logo{position:relative;z-index:2;white-space:nowrap}
-.parakeet-branch{position:absolute;left:5vw;top:58px;width:275px;height:17px;pointer-events:none;z-index:1}
-.parakeet-branch:before{content:"";position:absolute;left:0;right:0;top:7px;height:5px;background:#80583d;border:2px solid #b88a5d;border-radius:3px;transform:rotate(-1deg);box-shadow:0 3px 0 rgba(0,0,0,.18)}
-.parakeet-branch:after{content:"";position:absolute;left:32px;top:-1px;width:44px;height:17px;background:#6f9b62;clip-path:polygon(0 70%,36% 0,55% 48%,100% 18%,78% 80%,42% 100%);transform:rotate(-8deg);box-shadow:100px 0 #6f9b62}
-.parakeet-bird{position:fixed;left:0;top:0;width:64px;height:64px;z-index:40;pointer-events:none;image-rendering:pixelated;will-change:transform;filter:drop-shadow(2px 4px 0 rgba(0,0,0,.18))}
-@media(max-width:900px){.parakeet-branch{left:4vw;top:53px;width:210px}.parakeet-bird{width:52px;height:52px}}
-@media(prefers-reduced-motion:reduce){.parakeet-bird{filter:none}}
-
-/* Tiny pixel flowers growing along the perch */
-.parakeet-branch{background:
- radial-gradient(circle at 18% 15%,#ffd9e8 0 3px,transparent 3.5px),
- radial-gradient(circle at 20% 4%,#f18caf 0 3px,transparent 3.5px),
- radial-gradient(circle at 22% 15%,#ffd9e8 0 3px,transparent 3.5px),
- radial-gradient(circle at 20% 12%,#f6c84f 0 1.7px,transparent 2px),
- radial-gradient(circle at 54% 2%,#fff0a6 0 3px,transparent 3.5px),
- radial-gradient(circle at 52% 14%,#ffcf65 0 3px,transparent 3.5px),
- radial-gradient(circle at 56% 14%,#ffcf65 0 3px,transparent 3.5px),
- radial-gradient(circle at 54% 11%,#e18a48 0 1.7px,transparent 2px),
- radial-gradient(circle at 82% 3%,#d9c7ff 0 3px,transparent 3.5px),
- radial-gradient(circle at 80% 14%,#bca1f5 0 3px,transparent 3.5px),
- radial-gradient(circle at 84% 14%,#bca1f5 0 3px,transparent 3.5px),
- radial-gradient(circle at 82% 11%,#f6d46b 0 1.7px,transparent 2px)}
+.parakeet-branch{position:absolute;left:5vw;top:42px;width:275px;height:46px;pointer-events:none;z-index:1;overflow:visible}
+.branch-blossoms{transform-box:fill-box;transform-origin:center bottom;animation:blossom-sway 5s ease-in-out infinite}
+.parakeet-bird{position:fixed;left:0;top:0;width:120px;height:100px;z-index:40;pointer-events:none;transform-origin:top left;will-change:transform;filter:drop-shadow(0 3px 2px rgba(0,0,0,.18))}
+@keyframes blossom-sway{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1.5deg)}}
+@media(max-width:900px){.parakeet-branch{left:4vw;top:37px;width:210px;height:35px}}
+@media(prefers-reduced-motion:reduce){.branch-blossoms{animation:none}.parakeet-bird{filter:none}}
