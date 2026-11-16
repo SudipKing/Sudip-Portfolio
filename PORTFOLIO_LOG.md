@@ -153,6 +153,14 @@ I asked Claude Code: *"add the genome repo to artifact 4 on my portfolio"*, and 
 
 I renamed `ARTIFACT_LOG.md` to `PORTFOLIO_LOG.md`, so the name says which artifact it belongs to, and expanded it from the short Oct 18 note into this full history.
 
+### Phase 11: Artifact 5 card, GameTime (Nov 15)
+
+The Moonshot is a team project, not a solo repo: **GameTime** ([rresnik2/gametime](https://github.com/rresnik2/gametime)), my teammate's vertical, swipe-to-discover feed of live gaming streams (Expo for iOS, Android and web, with Supabase). Its plan calls for one original browser game that streamers can play and stream.
+
+- I asked Claude Code: *"analyze everything in this repo and tell me about it"*. It read the code, schema, decision records and product plan, and summarized what was built and what was still open.
+- Then: *"push my game The Biosphere Realm, to test how the live feature or the game feature might work"*. Claude copied the playable game into `games/the-biosphere-realm/`, added a local test-data row for it, had the linter skip `games/`, and updated the repo's handover notes. It pushed the branch `feat/biosphere-realm-game`, and on my go-ahead opened [PR #5](https://github.com/rresnik2/gametime/pull/5). All four CI checks passed.
+- Then: *"Add this repo as Artifact 5 on my portfolio repo and update the links, reflection and its content"*. Claude filled in the card as **The Moonshot: GameTime** with links to the repo, the live app and my PR, and drafted the reflection from what I did in the session, for me to edit.
+
 ## 4. Decisions
 
 - **Static HTML/CSS/JS on GitHub Pages.** No framework and no build step, so the agent's output could be pushed and go live as-is.
@@ -183,12 +191,11 @@ I renamed `ARTIFACT_LOG.md` to `PORTFOLIO_LOG.md`, so the name says which artifa
 
 ## 6. Where it stands / next
 
-**Live now:** the home page (hero with photo, About, skill cards, six experience entries, five projects, Research, Currently learning, Contact), the light/dark toggle, the budgie in the header, `resume.html`, and `artifacts.html` with Artifacts 1 to 4 linked to repos and live sites.
+**Live now:** the home page (hero with photo, About, skill cards, six experience entries, five projects, Research, Currently learning, Contact), the light/dark toggle, the budgie in the header, `resume.html`, and `artifacts.html` with all five artifacts linked to repos and live sites.
 
 **Still to do:**
 
-- **Artifact 4 reflection.** Still `___`.
-- **Artifact 5 ("The Moonshot").** Still a placeholder with `---` links and the "Not built yet" tag.
+- **Artifact 5 (GameTime).** My PR #5 is open until my teammate merges it. The card's reflection is a draft written from the session; I may rewrite it in my own words.
 - **Stale README.** `README.md` still describes the Oct 7 placeholder workflow (`data-placeholder`, `assets/resume.pdf`), which no longer applies.
 - **Leftover patch script.** `update_portfolio.py` is still in the repo. It could be removed now that its changes are applied.
 - **Theme toggle on `resume.html`.** The resume page doesn't load `theme.js`, so it ignores the toggle.
