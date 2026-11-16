@@ -160,6 +160,9 @@ The Moonshot is a team project, not a solo repo: **GameTime** ([rresnik2/gametim
 - I asked Claude Code: *"analyze everything in this repo and tell me about it"*. It read the code, schema, decision records and product plan, and summarized what was built and what was still open.
 - Then: *"push my game The Biosphere Realm, to test how the live feature or the game feature might work"*. Claude copied the playable game into `games/the-biosphere-realm/`, added a local test-data row for it, had the linter skip `games/`, and updated the repo's handover notes. It pushed the branch `feat/biosphere-realm-game`, and on my go-ahead opened [PR #5](https://github.com/rresnik2/gametime/pull/5). All four CI checks passed.
 - Then: *"Add this repo as Artifact 5 on my portfolio repo and update the links, reflection and its content"*. Claude filled in the card as **The Moonshot: GameTime** with links to the repo, the live app and my PR, and drafted the reflection from what I did in the session, for me to edit.
+- Claude noticed that its GameTime commit and PR #5 description carried "Co-Authored-By: Claude" and "Generated with Claude Code" lines, against my sole-authorship rule. On my *"Yes, remove it"*, it rewrote the commit message (same files, now `5926084`, under my name only), force-pushed the PR branch with a lease so nothing else could be overwritten, and removed the footer from the PR description.
+- On *"push it and open a PR"*, Claude pushed `artifact-5-gametime` (commit `16bd35f`) and opened [PR #2](https://github.com/SudipKing/Sudip-Portfolio/pull/2) with no AI footer. On *"merge and commit the portfolio PR"*, it merged PR #2 (`58670a0`) and checked that the GitHub Pages build finished and the live Artifacts page shows the GameTime card.
+- When the session moved into this folder, the app copied its scratch files in with it (a full `gametime/` working copy and an `npm-ci.log`). Claude kept them out of the commit, and on my go-ahead deleted them.
 
 ## 4. Decisions
 
@@ -195,7 +198,7 @@ The Moonshot is a team project, not a solo repo: **GameTime** ([rresnik2/gametim
 
 **Still to do:**
 
-- **Artifact 5 (GameTime).** My PR #5 is open until my teammate merges it. The card's reflection is a draft written from the session; I may rewrite it in my own words.
+- **Artifact 5 (GameTime).** The card is live (portfolio PR #2, merged Nov 15). My GameTime PR #5 stays open until my teammate merges it. The card's reflection is a draft written from the session; I may rewrite it in my own words.
 - **Stale README.** `README.md` still describes the Oct 7 placeholder workflow (`data-placeholder`, `assets/resume.pdf`), which no longer applies.
 - **Leftover patch script.** `update_portfolio.py` is still in the repo. It could be removed now that its changes are applied.
 - **Theme toggle on `resume.html`.** The resume page doesn't load `theme.js`, so it ignores the toggle.
